@@ -131,4 +131,8 @@ li {
   transition: all 1s ease;
 }
 
+.invitees-move {
+  transition: all 1s ease;
+}
+
 </style>
