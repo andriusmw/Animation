@@ -31,8 +31,9 @@
     @keypress.enter="addInvitee"
     >
   <ul>
+    <TransitionGroup name="invitees">
     <li v-for="name in names" :key="name">{{name}}</li>
-
+    </TransitionGroup>
 
   </ul>
  </div>
@@ -113,4 +114,21 @@ li {
   text-align: center;
   cursor: pointer;
 }
+
+/* TRANSITION GROUP */
+
+.invitees-enter-from {
+  opacity: 0;
+  transform:  scale(0.5);
+}
+
+.invitees-enter-to {
+  opacity: 1;
+  transform:  scale(1);
+}
+
+.invitees-enter-active {
+  transition: all 1s ease;
+}
+
 </style>
